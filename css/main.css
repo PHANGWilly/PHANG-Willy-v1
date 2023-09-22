@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*, ::before, ::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color : rgb(0, 148, 255);
+    --secondary-color : rgb(0, 133,229);
+    --third-color : rgb(3, 105, 179);
+    --main-title-font : 'Radio Canada', sans-serif;
+    --main-body-font : 'Ubuntu', sans-serif;
+    --fa-font : 'FontAwesome', sans-serif; 
+}
+
+body{
+    min-height: 100vh;
+    overflow-y: auto;
+    line-height: 30px;
+    scroll-behavior: smooth;
+    cursor: default;
+    word-wrap: break-word;
+    font-family: var(--main-body-font);
+}
+
+/*HEADER - NAV*/
+
+.site__nav .link__to{
+    text-decoration: none;
+    text-underline-offset: 5px;
+    color : white;
+}
+
+.site__nav .link__to:hover{
+    text-decoration: 2px underline white;
+    text-underline-offset: 5px;
+}
+
+.header{
+    background-color: var(--main-color);
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.header__layout{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    gap: 1rem;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.site__nav{
+    padding : 5px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    animation: FadeIn 1s ease-in-out;
+}
+
+.site__nav:hover{
+    cursor: pointer;
+}
+
+.dropdown{
+    position: relative;
+}
+
+.dropdown__menu{
+    position: absolute;
+    left: 0;
+    top: calc(100% + 0.25rem);
+    background-color: white;
+    padding: 1rem .75rem;
+    border-radius: .0.25rem;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity .2s ease-in-out, transform .2s ease-in-out;
+}
+
+.dropdown__link{
+    cursor: pointer;
+    font-size: 20px;
+    border: none;
+    background-color: rgba(0,0,0,0);
+    color: white;
+}
+
+.dropdown .fa-angle-down{
+    padding: 0 5px;
+}
+
+.dropdown.active .anim__rotate{
+    transform: rotate(180deg);
+    transition: .5s transform ease-in;
+}
+
+.dropdown .anim__rotate{
+    transform: rotate(0deg);
+    transition: .5s transform ease-in;
+}
+
+.dropdown.active > .dropdown__link + .dropdown__menu{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.dropdown__menu .link{
+    padding: 10px 0;
+}
+
+.dropdown__menu .link .link__to{
+    padding: 10px 0; 
+    color : var(--main-color);
+}
+
+.dropdown__menu .link .link__to:hover{
+    text-decoration: 2px underline var(--main-color);
+    text-underline-offset: 5px;
+}
+
+.button__menu{
+    display: none;
+}
+
+.link__to_logo{
+    max-width: 250px;
+}
+
+.anim__height{
+    animation: anim__height .8s;
+}
+
+@keyframes anim__height {
+    from{
+        max-height: 0;
+    }
+    to{
+        max-height: 727px;
+    }
+}
+
+.anime__height_up{
+    max-height: 727px;
+}
+
+/* CONTENT */
+.content{
+    padding: 50px 5%;
+}
+
+.title{
+    background-color: var(--secondary-color);
+    text-transform: uppercase;
+}
+
+.h1-title{
+    text-align: center;
+    color: white;
+    align-items : center;
+    padding: 20px 0;
+    font-family: var(--main-title-font);
+    animation: FadeDown 1.5s ease-out;
+}
+
+.sub-title{
+    background-color: var(--third-color);
+    text-transform: uppercase;
+}
+
+.h3__sub_title{
+    text-align: center;
+    color: white;
+    align-items : center;
+    padding: 20px 0;
+    font-family: var(--main-title-font);
+    animation: FadeDown2 2s ease-out;
+}
+
+
+/*FOOTER*/
+.footer{
+    background-color: var(--main-color);
+    display: block;
+    align-items: center;
+    clear: both;
+    position: sticky;
+    top: 100%;
+}
+
+.footer__layout{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    padding: .5rem;
+    gap: 1rem;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.footer__layout_2{
+    display: block;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+    max-width: 1240px;
+    margin: 0 auto;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+/*MEDIA QUERIES*/
+
+ @media screen and (max-width : 1024px){
+    .header{
+        height: 100%;
+        display: block;
+    }
+
+    .header__is_open > .header__layout{
+        display: block;
+        padding: 100px 0;
+    }
+
+    .header__layout{
+        display: none;
+    }
+
+    .site__nav{
+        padding: 15px 30px;
+    }
+
+    .dropdown__menu{
+        z-index: 20;
+    }
+
+    .button__mobile{
+        top : 0;
+        right: 0;
+        position: absolute;
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        background-color: var(--main-color);
+    }
+
+    .button__menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);
+        border: none;
+        cursor: pointer;
+        padding: 20px;
+        font-size: 1.5em;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        color: var(--main-color);
+    }
+
+    .content{
+        padding: 20px 2%;
+    }
+
+    .anim__height .site__nav{
+        animation: FadeIn 1.5s ease-in-out;
+    }
+
+}
+
+@media screen and (max-width:1024px){
+    .title{
+        margin: 90px 0;
+    }
+
+}
+
+@media screen and (max-width:769px) {
+    .content{
+        padding: 130px 0;
+    }    
+
+    .title{
+        margin: 90px 0;
+    }
+}
+
+@media screen and (max-width : 1024px){
+    .footer{
+        height: 100%;
+    }
+
+    .footer__layout, .footer__layout_2{
+        display: block;
+    }
+}
+
+/*KEY FRAMES*/
+@keyframes FadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes FadeDown {
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+@keyframes FadeDown2 {
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0px);
+    }
+}

@@ -1,0 +1,100 @@
+.work__list_content{
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(2, minmax(450px, 1fr));
+    padding: 40px;
+}
+
+.work__content{
+    font-family: 'Ubuntu', sans-serif;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    -webkit-transition : all .35s cubic-bezier(.645,.045,.355,1);
+    transition: all .35s cubic-bezier(.645,.045,.355,1);
+    padding: 5px 10px;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.2);
+    width: 100%;
+}
+
+.work__content p{
+    font-size: calc(.8em + 2px);
+}
+
+.project__name{
+    font-family: 'Radio Canada', sans-serif;
+}
+
+.work__content:hover .project__part_right{
+    transform: scale(1.07);
+}
+
+.date{
+    padding: 20px 0 10px 0;
+}
+
+.technology{
+    padding : 10px 0 20px 0;
+}
+
+
+.project__part_right{
+    padding-left: 10px;
+    margin: auto;
+    -webkit-transition : all .35s cubic-bezier(.645,.045,.355,1);
+    transition: all .35s cubic-bezier(.645,.045,.355,1);
+}
+
+.link__to{
+    color : black;
+    text-decoration: none;
+}
+
+.cahier_des_charges_text::before{
+    content:'\f061';
+    font-family: FontAwesome;
+    padding-right: 5px;
+    -webkit-transition : all .35s cubic-bezier(.645,.045,.355,1);
+    transition: all .35s cubic-bezier(.645,.045,.355,1);
+}
+
+.cahier_des_charges_text:hover::before{
+    padding-right: 10px;
+    color:var(--main-color);
+}
+
+.logo__project{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    max-width: 400px;
+}
+
+@media screen and (max-width:1024px){
+    .work__list_content{
+        display: grid;
+        grid-gap : 50px 0;
+        grid-template-columns: repeat(1, minmax(300px, 1fr));
+        padding: 20px 1%;
+    }
+
+    .work__content{
+        margin: 5px 0;
+        display: grid;
+        grid-template-columns: 100%;
+        width: 100%;
+    }
+
+    .project__part_right{
+        padding: 20px 0;
+    }
+
+    .logo__project {
+        max-width: 300px;
+    }
+
+    .link__to:hover{
+        text-decoration: none;
+    }
+}
+

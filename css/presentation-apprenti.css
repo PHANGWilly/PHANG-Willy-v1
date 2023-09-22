@@ -1,0 +1,319 @@
+section{
+    padding: 50px 0;
+    margin: 0 auto;
+}
+
+.informations .container{
+    margin: 0 auto;
+    max-width: 950px;
+    width: 100%;
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(2, minmax(450px, 1fr));
+    padding: 40px;
+}
+
+.informations .f-part {
+    margin: 0 auto;
+}
+
+.informations .f-part img{
+    width: 200px;
+    height: 100%;
+}
+
+.informations .s-part{
+    text-align: center;
+}
+
+.s-part .text{
+    font-size: 17px;
+    padding: 10px 0;
+}
+
+.s-part .link__to{
+    text-decoration: none;
+    color: black;
+    -webkit-transition : all .35s cubic-bezier(.645,.045,.355,1);
+    transition: all .35s cubic-bezier(.645,.045,.355,1);
+}
+
+.s-part .link__to span{
+    padding-right: 5px;
+    -webkit-transition : all .35s cubic-bezier(.645,.045,.355,1);
+    transition: all .35s cubic-bezier(.645,.045,.355,1);
+    color: var(--secondary-color-color);
+}
+
+.s-part .link__to:hover span{
+    padding-right: 15px;
+}
+
+.s-part .link__to:hover{
+    color: var(--main-color);
+}
+
+.parcours{
+    margin: 0 auto;
+}
+
+.parcours .container{
+    max-width: 950px;
+    width: 100%;
+    padding: 40px 50px  40px  40px;
+    margin: 100px auto 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    height: 100%;
+}
+
+.parcours .container .topic{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.parcours .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.parcours .content .list{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin-right: 50px;
+    position: relative;
+}
+.parcours .content .list label{
+    height: 60px;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 60px;
+    cursor: pointer;
+    padding-left: 10px;
+    transition: all 0.5s ease;
+    color: #333;
+    z-index: 12;
+}
+
+.parcours #bts:checked ~ .list label.bts,
+.parcours #baccalaureat:checked ~ .list label.baccalaureat{
+    color: var(--main-color);
+}
+
+.parcours .content .list label:hover{
+    color: var(--main-color);
+}
+
+.parcours .content .slider{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    border-left: 2px solid var(--secondary-color);
+    transition: all 0.4s ease;
+}
+
+.parcours #bts:checked ~ .list .slider{
+    top: 0;
+}
+
+.parcours #baccalaureat:checked ~ .list .slider{
+    top: 60px;
+}
+
+.parcours .content .text-content{
+    width: 80%;
+    height: 100%;
+}
+
+.parcours .content .text{
+    display: none;
+}
+
+.parcours .content .text .content__title{
+    font-family: var(--main-title-font);
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.parcours .content .text p{
+    text-align: justify;
+}
+
+.parcours .content .text-content .bts{
+    display: block;
+}
+
+.parcours #bts:checked ~ .text-content .bts,
+.parcours #baccalaureat:checked ~ .text-content .baccalaureat{
+    display: block;
+}
+
+.parcours #baccalaureat:checked ~ .text-content .bts{
+    display: none;
+}
+
+.parcours .content input{
+    display: none;
+}
+
+.parcours .content__description > *{
+    display: block;
+    padding: 10px 0;
+}
+
+.parcours .content__description .link__to{
+    text-decoration: none;
+}
+
+.parcours .details__title{
+    font-weight: 600;
+}
+
+.parcours .link__to img{
+    width: 300px;
+    height: 150px;
+
+}
+
+.parcours .link__to{
+    -webkit-transition : all .35s cubic-bezier(.645,.045,.355,1);
+    transition: all .35s cubic-bezier(.645,.045,.355,1);
+}
+
+.parcours .link__to:hover{
+    transform: scale(1.05);
+}
+
+.h3-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    padding: 20px 0;
+    background-color: var(--main-color);
+    color: white;
+}
+
+.competences .h3-sub-title{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 25px;
+    padding: 20px 0;
+    background-color: var(--secondary-color);
+    margin: 0 auto;
+    color: white;
+}
+
+.competences .h4-title{
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.competences .competence{
+    padding: 30px 0;
+}
+
+.grid__template{
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    padding: 40px;
+}
+
+.competence .langage{
+    text-align: center;
+}
+
+.competence .langage .langage__img{
+    margin: 0 auto;
+}
+
+.langage__title{
+    font-weight: 600;
+}
+
+.langage{
+    -webkit-transition : all .35s cubic-bezier(.645,.045,.355,1);
+    transition: all .35s cubic-bezier(.645,.045,.355,1);
+}
+
+.langage:hover{
+    transform: scale(1.1);
+}
+
+@media screen and (max-width:1024px){
+    .parcours .content{
+        display: block;
+    }
+
+    .parcours .content .list{
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 30px;
+    }
+
+    .parcours .content .list label{
+        padding-right: 20px;
+    }
+
+    .parcours .content .slider{
+        border-left: none;
+        border-bottom: 2px solid var(--secondary-color);
+    }
+
+    .parcours #bts:checked ~ .list .slider{
+        left: 0;
+    }
+    
+    .parcours #baccalaureat:checked ~ .list .slider{
+        left: 80px;
+        top : 0;
+    }
+
+    .parcours .content .text .content__title{
+        font-size: calc(1.5rem - 1vw);
+        font-weight: 800;
+    }
+
+    .grid__template{
+        padding: 15px;
+        grid-template-columns: repeat(2, minmax(125px, 1fr));
+    }
+
+    .informations .container{
+        padding: 15px;
+        grid-template-columns: repeat(1, minmax(125px, 1fr))
+    }
+}
+
+@media screen and (max-width: 769px){
+    .content {
+        padding: 130px 2% !important;
+    }
+
+    .parcours #bts:checked ~ .list .slider{
+        left: 0;
+    }
+    
+    .parcours #baccalaureat:checked ~ .list .slider{
+        left: 100px;
+        top : 0;
+    }
+
+    .parcours  .content {
+        padding: 20px 0 !important;
+    }
+
+    .parcours .content .text .content__title{
+        font-size: calc(1.1rem - 1vw);
+        font-weight: 800;
+    }
+    
+}
+
+

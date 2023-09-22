@@ -1,0 +1,31 @@
+.content__ml{
+    width: 1240px;
+    margin: 0 auto;
+}
+
+.part{
+    padding: 20px 0;
+}
+
+.h2-title{
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+.content__ml .link__to{
+    text-decoration: none;
+    color: black;
+    -webkit-transition : all .35s cubic-bezier(.645,.045,.355,1);
+    transition: all .35s cubic-bezier(.645,.045,.355,1);
+}
+
+.content__ml .link__to:hover{
+    padding-left: 10px;
+    color : var(--main-color);
+}
+
+@media screen and (max-width:1024px) {
+    .content__ml{
+        width: 90%;
+    }
+}
